@@ -1,6 +1,10 @@
 # MIST-4610-Project-1
 
-Group Members: Jackson Boyer, Rong Xin Hu, Justus Nour, Trey Trotti, Sophie Yoo
+Team Name:
+Group 7
+
+Group Members: 
+Jackson Boyer, Rong Xin Hu, Justus Nour, Trey Trotti, Sophie Yoo
 
 Data Model: Hospital 
 Entities
