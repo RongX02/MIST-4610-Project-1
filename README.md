@@ -3,7 +3,7 @@
 Team Name:
 
 Group 7
-
+---
 Group Members: 
 
 Jackson Boyer
@@ -15,11 +15,11 @@ Justus Nour
 Trey Trotti
 
 Sophie Yoo
-
+---
 Scenario Description:
 
 Our group chose to design a database for a hospital management system that helps organize and track patient care, staff activity, and billing information. The goal of this database is to store and manage key information about patients, doctors, appointments, treatments, prescriptions, and financial transactions in a way that supports hospital operations and managerial decision-making. The database allows the hospital to record basic details about patients, insurance providers, and the doctors who treat them. Each doctor is assigned to a specific department, and each patient may have multiple appointments with different doctors. During those appointments, doctors can issue prescriptions, request lab tests, and add new entries to the patient’s medical record. Every patient is assigned to a room during their stay, and each visit creates a bill that is linked to their insurance provider. The billing information helps hospital management track outstanding payments and monitor total revenue. This data model captures the essential operational data of a hospital and supports queries that managers may use to make better decisions—such as identifying the most frequently visited departments, tracking doctor workloads, monitoring patient admissions, and reviewing financial performance.
-
+---
 Data Model Explanation: 
 
 Our data model represents how a real hospital functions day to day, capturing the connections between patients, doctors, departments, and the many services that keep a hospital running smoothly. At the core of the model is the Patient entity, since nearly every process in the hospital revolves around the patient. Each patient can have multiple medical records that track their diagnoses and treatments, and they can also make many appointments with different doctors. Because an appointment depends on both the patient and the doctor, it forms a many-to-many relationship, showing how patients and doctors interact throughout the care process. Every appointment results in one Bill, which records the cost and payment details, and since each patient’s bill is tied to their insurance provider, there’s a one-to-many relationship between Insurance and Patient, showing that one insurance plan can cover multiple individuals.
@@ -28,9 +28,9 @@ Beyond daily appointments, doctors can issue Prescriptions or order Lab Tests fo
 
 ![image_123650291 (1)](https://github.com/user-attachments/assets/24e616a4-e526-4150-82a1-af6313b2c4a1)
 
-# Hospital Database – Data Dictionary
+# Data Dictionary
 
-## Appointment
+# Appointment
 | Column Name       | Description                                   | Data Type | Size | Format       | Key?         |
 |-------------------|-----------------------------------------------|-----------|------|--------------|--------------|
 | apptID            | Unique number indicating the patient's appointment | INT       | —    | —            | PK           |
@@ -45,7 +45,7 @@ Beyond daily appointments, doctors can issue Prescriptions or order Lab Tests fo
 
 ---
 
-## Bill
+# Bill
 | Column Name  | Description                               | Data Type     | Size | Format     | Key?         |
 |--------------|-------------------------------------------|---------------|------|------------|--------------|
 | billID       | Unique number indicating the patient's bill number | INT           | —    | —          | PK           |
@@ -57,7 +57,7 @@ Beyond daily appointments, doctors can issue Prescriptions or order Lab Tests fo
 
 ---
 
-## Department
+# Department
 | Column Name   | Description                 | Data Type | Size | Format | Key? |
 |---------------|-----------------------------|-----------|------|--------|------|
 | departmentID  | Unique number for department| INT       | —    | —      | PK   |
@@ -67,7 +67,7 @@ Beyond daily appointments, doctors can issue Prescriptions or order Lab Tests fo
 
 ---
 
-## Doctor
+# Doctor
 | Column Name   | Description                         | Data Type | Size | Format        | Key?            |
 |---------------|-------------------------------------|-----------|------|---------------|-----------------|
 | doctorID      | Unique number to identify the doctor| INT       | —    | —             | PK              |
@@ -82,7 +82,7 @@ Beyond daily appointments, doctors can issue Prescriptions or order Lab Tests fo
 
 ---
 
-## Insurance
+# Insurance
 | Column Name     | Description               | Data Type | Size | Format | Key? |
 |-----------------|---------------------------|-----------|------|--------|------|
 | insuranceID     | Unique number for insurance | INT     | —    | —      | PK   |
@@ -92,7 +92,7 @@ Beyond daily appointments, doctors can issue Prescriptions or order Lab Tests fo
 
 ---
 
-## Lab_Test
+# Lab_Test
 | Column Name | Description                 | Data Type | Size | Format     | Key?         |
 |-------------|-----------------------------|-----------|------|------------|--------------|
 | labtestID   | Unique number for the lab test | INT     | —    | —          | PK           |
@@ -104,7 +104,7 @@ Beyond daily appointments, doctors can issue Prescriptions or order Lab Tests fo
 
 ---
 
-## Med_Record
+# Med_Record
 | Column Name     | Description                          | Data Type | Size | Format     | Key?         |
 |-----------------|--------------------------------------|-----------|------|------------|--------------|
 | recordID        | Unique number for the record         | INT       | —    | —          | PK           |
@@ -115,7 +115,7 @@ Beyond daily appointments, doctors can issue Prescriptions or order Lab Tests fo
 
 ---
 
-## Patient
+# Patient
 | Column Name      | Description            | Data Type | Size | Format        | Key?         |
 |------------------|------------------------|-----------|------|---------------|--------------|
 | patientID        | Unique number for patient | INT    | —    | —             | PK           |
@@ -132,7 +132,7 @@ Beyond daily appointments, doctors can issue Prescriptions or order Lab Tests fo
 
 ---
 
-## Prescription
+# Prescription
 | Column Name       | Description                          | Data Type | Size | Format | Key?         |
 |-------------------|--------------------------------------|-----------|------|--------|--------------|
 | prescriptionID    | Unique number for the prescription   | INT       | —    | —      | PK           |
@@ -145,7 +145,7 @@ Beyond daily appointments, doctors can issue Prescriptions or order Lab Tests fo
 
 ---
 
-## Room
+# Room
 | Column Name        | Description                                   | Data Type | Size | Format | Key?            |
 |--------------------|-----------------------------------------------|-----------|------|--------|-----------------|
 | roomID             | Unique number for specific rooms              | INT       | —    | —      | PK              |
