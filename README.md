@@ -29,7 +29,7 @@ Beyond daily appointments, doctors can issue Prescriptions or order Lab Tests fo
 
 ![image_123650291 (1)](https://github.com/user-attachments/assets/24e616a4-e526-4150-82a1-af6313b2c4a1)
 
-## Data Dictionary
+# Data Dictionary
 
 # Appointment
 | Column Name       | Description                                   | Data Type | Size | Format       | Key?         |
@@ -154,3 +154,38 @@ Beyond daily appointments, doctors can issue Prescriptions or order Lab Tests fo
 | room_type          | The room type                                 | VARCHAR   | 45   | —      | —               |
 | room_availability  | Status (vacant/occupied)                      | VARCHAR   | 45   | —      | —               |
 | departmentID       | Department assigned                           | INT       | —    | —      | FK – Department |
+
+## SQL Queries
+
+### Simple Queries
+
+---
+
+#### **Query 1**
+Shows how many patients the hospital has for each blood type, excluding those with type B or B+.  
+The results are grouped by blood type and ordered by the number of patients in descending order.  
+<img width="1012" height="591" alt="H1" src="https://github.com/user-attachments/assets/7966d81e-36b1-4481-9f5d-45991ecf2d37" />
+
+This query is useful for medical staff to understand the distribution of blood types among patients, which can help in planning for blood supply, managing inventory, and ensuring that the most needed blood types are available for transfusions and emergencies.
+
+---
+
+#### **Query 2**
+Lists each patient’s ID, name, and the number of medical records they have.  
+<img width="892" height="652" alt="H2" src="https://github.com/user-attachments/assets/6818367e-a9e8-4a70-aeda-fcdfd6d9d54b" />
+
+Query 2 allows the hospital to identify which patients have the most medical history or frequent visits. This helps staff recognize patients who may need more ongoing care, follow-ups, or specialized attention. Over time, this information could support improved patient tracking systems or wellness programs for those with frequent hospital visits.
+
+---
+
+#### **Query 3**
+Lists the first name, last name, and drug name for each patient who is prescribed medication that must be taken once daily.  
+
+This query helps hospital staff quickly see which patients are on daily medications, making it easier to keep track of their treatment routines. This allows doctors and nurses to provide timely reminders, check-ins, and support to help patients stay consistent with their prescriptions, improving their overall care and recovery experience.
+
+---
+
+#### **Query 4**
+Lists the ID, first name, last name, and department ID of all doctors who work in the Cardiology department.  
+
+This query helps hospital staff quickly see which doctors are part of the Cardiology team. By having this list, it becomes easier to plan schedules, organize department meetings, and make sure that patients who need heart-related care are assigned to the right specialists. It also helps improve coordination within the department, ensuring that doctors can work together efficiently to provide the best possible care for their patients.
