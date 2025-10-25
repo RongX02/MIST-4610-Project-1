@@ -29,7 +29,7 @@ Beyond daily appointments, doctors can issue Prescriptions or order Lab Tests fo
 
 ![image_123650291 (1)](https://github.com/user-attachments/assets/24e616a4-e526-4150-82a1-af6313b2c4a1)
 
-# Data Dictionary
+## Data Dictionary
 
 # Appointment
 | Column Name       | Description                                   | Data Type | Size | Format       | Key?         |
