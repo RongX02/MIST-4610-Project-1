@@ -195,3 +195,5 @@ Lists the ID, first name, last name, and department ID of all doctors who work i
 <img width="977" height="727" alt="h4" src="https://github.com/user-attachments/assets/02036f2d-a5d1-4c6c-aa22-675786b17717" />
 
 This query helps hospital staff quickly see which doctors are part of the Cardiology team. By having this list, it becomes easier to plan schedules, organize department meetings, and make sure that patients who need heart-related care are assigned to the right specialists. It also helps improve coordination within the department, ensuring that doctors can work together efficiently to provide the best possible care for their patients.
+
+
