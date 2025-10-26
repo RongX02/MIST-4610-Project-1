@@ -6,11 +6,11 @@
 ---
 
 ## Group Members
-- Jackson Boyer  
-- Rong Xin Hu  
-- Justus Nour  
-- Trey Trotti  
-- Sophie Yoo  
+- Jackson Boyer @Jackson9812
+- Rong Xin Hu @RongX02 
+- Justus Nour @justusnour
+- Trey Trotti 
+- Sophie Yoo @sophieyoo
 
 ---
 
