@@ -6,11 +6,11 @@
 ---
 
 ## Group Members
-- Jackson Boyer @Jackson9812
-- Rong Xin Hu @RongX02 
-- Justus Nour @justusnour
+- Jackson Boyer [@jacksonboyer]
+- Rong Xin Hu https://github.com/RongX02/MIST-4610-Project-1
+- Justus Nour https://github.com/justusnour/MIST4610Project1
 - Trey Trotti 
-- Sophie Yoo @sophieyoo
+- Sophie Yoo
 
 ---
 
