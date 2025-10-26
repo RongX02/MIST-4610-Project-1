@@ -255,6 +255,9 @@ Lists the doctor’s name, their patient count, and the total number of prescrip
 
 Query 10 shows which doctors write the most prescriptions per patient on average.
 
+# Database Information
+Name of the database: ns_Group7
+
 
 
 
