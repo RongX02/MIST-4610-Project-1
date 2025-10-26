@@ -6,7 +6,7 @@
 ---
 
 ## Group Members
-- Jackson Boyer [@jacksonboyer]
+- Jackson Boyer @jacksonboyer
 - Rong Xin Hu https://github.com/RongX02/MIST-4610-Project-1
 - Justus Nour https://github.com/justusnour/MIST4610Project1
 - Trey Trotti 
