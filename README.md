@@ -196,4 +196,60 @@ Lists the ID, first name, last name, and department ID of all doctors who work i
 
 This query helps hospital staff quickly see which doctors are part of the Cardiology team. By having this list, it becomes easier to plan schedules, organize department meetings, and make sure that patients who need heart-related care are assigned to the right specialists. It also helps improve coordination within the department, ensuring that doctors can work together efficiently to provide the best possible care for their patients.
 
+## Complex Queries
+
+---
+
+#### **Query 5**
+Lists each doctor's name, their department, and the number of direct reports they have, only showing the doctors who are supervisors with at least two other doctors reporting to them.  
+
+<img width="1209" height="630" alt="h5" src="https://github.com/user-attachments/assets/3aad444a-4ec4-428a-8e37-b1bfd7b7d5b3" />
+
+This query enables hospital managers to easily identify which doctors are responsible for supervising others. Knowing who the supervisors are makes it easier to understand how the hospital’s teams are structured, plan schedules, and keep departments running smoothly. It also helps ensure that doctors managing larger teams get the support and resources they need to lead effectively and provide the best care possible.
+
+---
+
+#### **Query 6**
+Shows which hospital departments generate the highest average appointment bill amounts, and how many appointments they have handled.  
+
+<img width="464" height="188" alt="h6" src="https://github.com/user-attachments/assets/82cda399-a353-4e0f-92c4-997ebb483319" />
+
+Query 6 allows a hospital administrator to identify which departments are the most profitable or the most frequently used. This can help the hospital justify an increase in the number of staff as well as better resource allocations to high-earning departments. On the other side, low-revenue departments will be identified and reviewed for cost-efficiency improvements.
+
+---
+
+#### **Query 7**
+Shows which patients currently have unpaid bills, and which department they were treated in.  
+
+<img width="465" height="297" alt="h7" src="https://github.com/user-attachments/assets/0b4a1689-8b3a-4574-9579-8d341353118f" />
+
+Query 7 allows a hospital administrator to track patients who have outstanding balances by department. Departments with high unpaid revenue can be identified and action can be taken to lessen the number of unpaid bills.
+
+---
+
+#### **Query 8**
+Finds the cost of the patient’s bill and organizes it based on their insurance provider.  
+
+<img width="476" height="334" alt="h8" src="https://github.com/user-attachments/assets/ce3f584e-0121-4b30-b58b-c072d45b37be" />
+
+Query 8 allows a hospital administrator to access the cost of a patient’s bill to then organize that information based on their insurance provider.
+
+---
+
+#### **Query 9**
+Lists the patient name and their diagnoses, organized by their blood type, and sums the number of diagnoses.  
+
+<img width="485" height="278" alt="h9" src="https://github.com/user-attachments/assets/2bb5d325-2211-496f-9c9b-b3d6ad719fd8" />
+
+Query 9 allows a hospital administrator to organize patients and their diagnoses by their blood type. It then sums the number of diagnoses to see which is the most and least common.
+
+---
+
+#### **Query 10**
+Lists the doctor’s name, their patient count, and the total number of prescriptions given out.  
+
+<img width="624" height="249" alt="h10" src="https://github.com/user-attachments/assets/5f711564-09cb-4da1-ba7c-eb586a47c722" />
+
+Query 10 shows which doctors write the most prescriptions per patient on average.
+
 
