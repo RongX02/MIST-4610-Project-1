@@ -1,4 +1,4 @@
-# MIST-4610-Project-1
+# MIST4610Project1
 
 ## Team Name
 **Group 7**
