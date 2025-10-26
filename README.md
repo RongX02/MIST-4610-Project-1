@@ -9,9 +9,10 @@
 - Jackson Boyer https://github.com/Jackson9812/MIST4610Project1
 - Rong Xin Hu https://github.com/RongX02/MIST-4610-Project-1
 - Justus Nour https://github.com/justusnour/MIST4610Project1
-- Trey Trotti 
+- Trey Trotti
+https://github.com/treytrotti
 - Sophie Yoo
-
+http://github.com/sophieyoo/MIST4610Project1
 ---
 
 ## Scenario Description
