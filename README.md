@@ -166,7 +166,6 @@ Beyond daily appointments, doctors can issue Prescriptions or order Lab Tests fo
 
 ## SQL Queries
 
-### Simple Queries
 Query 1 shows how many patients the hospital has for each blood type, excluding those with type B or B+. The results are grouped by blood type and ordered by the number of patients in descending order. 
 
 <img width="408" height="245" alt="Screenshot 2025-10-24 at 10 39 08 AM" src="https://github.com/user-attachments/assets/ed16816a-5d03-4294-b19b-38995f22c3b6" />
