@@ -10,7 +10,7 @@
 - Rong Xin Hu https://github.com/RongX02/MIST-4610-Project-1
 - Justus Nour https://github.com/justusnour/MIST4610Project1
 - Trey Trotti
-https://github.com/treytrotti
+https://github.com/treytrotti/MIST4610Project1
 - Sophie Yoo
 http://github.com/sophieyoo/MIST4610Project1
 ---
@@ -251,7 +251,11 @@ Lists the doctor’s name, their patient count, and the total number of prescrip
 Query 10 shows which doctors write the most prescriptions per patient on average.
 
 # Database Information
-Name of the database: ns_Group7
+Database information: Name of the database: ns_Group7 
+
+Additional information: Each query written above is marked in the database using a stored procedure written by me which can be called using this format: CALL TP_Q1; To call the others, replace Q1 with Q2,Q3,Q4,Q5,Q6,Q7,Q8,Q9 OR Q10
+
+
 
 
 
