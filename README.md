@@ -34,96 +34,135 @@ Beyond daily appointments, doctors can issue Prescriptions or order Lab Tests fo
 
 ## Data Dictionary
 
-The following Data Dictionary defines the attributes, data types, and key designations for each entity in our hospital database schema.
+---
 
-### Table: Appointment
-| Column Name | Description                                               | Data Type | Size | Format     | Key?    |
-| ----------- | --------------------------------------------------------- | --------- | ---- | ---------- | ------- |
-| apptID       | Unique number indicating the patient’s appointment number | INT       |      |            | **Yes** |
-| appt_date    | Date of the appointment                                   | DATE      |      | YYYY/MM/DD |         |
-| appt_time    | Time of the appointment                                   | TIME      |      | HH:MM:SS   |         |
-| appt_reason  | Reason for the appointment                                | VARCHAR      | 45   |            |         |
+## Appointment
+| Column Name       | Description                                   | Data Type | Size | Format       | Key?         |
+|-------------------|-----------------------------------------------|-----------|------|--------------|--------------|
+| apptID            | Unique number indicating the patient's appointment | INT       | —    | —            | PK           |
+| patientID         | Links to patient                               | INT       | —    | —            | FK – Patient |
+| doctorID          | Doctor assigned                                | INT       | —    | —            | FK – Doctor  |
+| app_date          | Date of appointment                            | DATE      | —    | YYYY/MM/DD   | —            |
+| app_time          | Time of the appointment                        | VARCHAR   | 45   | HH:MM        | —            |
+| app_reason        | Reason for the appointment                     | VARCHAR   | 45   | —            | —            |
+| Bill_patientID    | Connects appointment to billing patient        | INT       | —    | —            | FK – Bill    |
+| Bill_insuranceID  | Connects appointment to insurance              | INT       | —    | —            | FK – Bill    |
+| Bill_billID       | Connects appointment to specific bill          | INT       | —    | —            | FK – Bill    |
 
-### Table: Bill
-| Column Name | Description                                        | Data Type | Size | Format     | Key?    |
-| ----------- | -------------------------------------------------- | --------- | ---- | ---------- | ------- |
-| billID      | Unique number indicating the patient’s bill number | INT       |      |            | **Yes** |
-| bill_amount | Amount to be paid                                  | DECIMAL   | (10,2)   |            |         |
-| bill_date   | The date the patient was billed                    | DATE      |      | YYYY/MM/DD |         |
-| bill_status | Status of the bill (paid or not)                   | VARCHAR      | 45   |            |         |
+---
 
-### Table: Department
-| Column Name  | Description                              | Data Type | Size | Format | Key?    |
-| ------------ | ---------------------------------------- | --------- | ---- | ------ | ------- |
-| departmentID | Unique number identifying the department | INT       |      |        | **Yes** |
-| dept_name    | Name of the department                   | VARCHAR      | 45   |        |         |
-| dept_floor   | Floor of the department                  | VARCHAR      | 45   |        |         |
-| dept_head    | Name of the department head              | VARCHAR      | 45   |        |         |
+## Bill
+| Column Name  | Description                               | Data Type     | Size | Format     | Key?         |
+|--------------|-------------------------------------------|---------------|------|------------|--------------|
+| billID       | Unique number indicating the patient's bill number | INT           | —    | —          | PK           |
+| patientID    | Patient linked to bill                    | INT           | —    | —          | FK – Patient |
+| insuranceID  | Insurance used                            | INT           | —    | —          | FK – Insurance |
+| bill_amount  | Amount to be paid                         | DECIMAL(10,2) | —    | —          | —            |
+| bill_date    | The date the patient was billed           | DATE          | —    | YYYY/MM/DD | —            |
+| bill_status  | Status of the bill, paid or not           | VARCHAR       | 45   | —          | —            |
 
-### Table: Doctor
-| Column Name   | Description                          | Data Type | Size | Format        | Key?    |
-| ------------- | ------------------------------------ | --------- | ---- | ------------- | ------- |
-| doctorID      | Unique number to identify the doctor | INT       |      |               | **Yes** |
-| doc_firstname | First name of the doctor             | VARCHAR      | 45   |               |         |
-| doc_lastname  | Last name of the doctor              | VARCHAR      | 45   |               |         |
-| doc_speciality | Doctor’s specialty                   | VARCHAR      | 45   |               |         |
-| doc_phone     | Doctor’s phone number                | VARCHAR      | 10   | (XXX)XXX-XXXX |         |
-| doc_email     | Doctor’s email                       | VARCHAR      | 45   |               |         |
+---
 
-### Table: Insurance
-| Column Name      | Description                         | Data Type | Size | Format | Key?    |
-| ---------------- | ----------------------------------- | --------- | ---- | ------ | ------- |
-| insuranceID      | Unique number to identify insurance | INT       |      |        | **Yes** |
-| provider         | Insurance provider name             | VARCHAR      | 45   |        |         |
-| ins_policynumber | Insurance policy number             | VARCHAR      | 45   |        |         |
-| ins_coverage     | Insurance coverage type             | VARCHAR      | 45   |        |         |
+## Department
+| Column Name   | Description                 | Data Type | Size | Format | Key? |
+|---------------|-----------------------------|-----------|------|--------|------|
+| departmentID  | Unique number for department| INT       | —    | —      | PK   |
+| dept_name     | Name of the department      | VARCHAR   | 45   | —      | —    |
+| dept_floor    | Floor of the department     | VARCHAR   | 45   | —      | —    |
+| dept_head     | Name of the department head | VARCHAR   | 45   | —      | —    |
 
-### Table: Lab_Test
-| Column Name | Description                            | Data Type | Size | Format     | Key?    |
-| ----------- | -------------------------------------- | --------- | ---- | ---------- | ------- |
-| labtestID      | Unique number to identify the lab test | INT       |      |            | **Yes** |
-| test_type   | Type of lab test                       | VARCHAR      | 45   |            |         |
-| test_result | Result of the lab test                 | VARCHAR      | 45   |            |         |
-| test_date   | Date of the lab test                   | DATE      |      | YYYY/MM/DD |         |
+---
 
-### Table: Med_Record
-| Column Name     | Description                               | Data Type | Size | Format     | Key?    |
-| --------------- | ----------------------------------------- | --------- | ---- | ---------- | ------- |
-| recordID        | Unique number used to identify the record | INT       |      |            | **Yes** |
-| med_diagnosis   | The diagnosis of the patient              | VARCHAR      | 45   |            |         |
-| med_treatment   | The suggested treatment for the patient   | VARCHAR      | 45   |            |         |
-| med_record_date | Date the record was created               | DATE      |      | YYYY/MM/DD |         |
+## Doctor
+| Column Name   | Description                         | Data Type | Size | Format        | Key?            |
+|---------------|-------------------------------------|-----------|------|---------------|-----------------|
+| doctorID      | Unique number to identify the doctor| INT       | —    | —             | PK              |
+| doc_firstname | First name of the doctor            | VARCHAR   | 45   | —             | —               |
+| doc_lastname  | Last name of the doctor             | VARCHAR   | 45   | —             | —               |
+| doc_specialty | Doctor's specialty                  | VARCHAR   | 45   | —             | —               |
+| doc_phone     | Doctor's phone number               | VARCHAR   | 10   | (XXX)XXX-XXXX | —               |
+| doc_email     | Doctor's email                      | VARCHAR   | 45   | —             | —               |
+| departmentID  | Department they belong to           | INT       | —    | —             | FK – Department |
+| dept_head     | Head of the department (ID)         | INT       | —    | —             | FK – Department |
+| supervisorID  | Supervisor doctor (ID)              | INT       | —    | —             | FK – Doctor     |
 
-### Table: Patient
-| Column Name       | Description                           | Data Type | Size | Format        | Key?    |
-| ----------------- | ------------------------------------- | --------- | ---- | ------------- | ------- |
-| patientID         | Unique number to identify the patient | INT       |      |               | **Yes** |
-| first_name        | First name of the patient             | VARCHAR      | 45   |               |         |
-| last_name         | Last name of the patient              | VARCHAR      | 45   |               |         |
-| patient_dob       | Date of birth                         | DATE      |      | YYYY/MM/DD    |         |
-| patient_gender    | Gender                                | VARCHAR      | 45   |               |         |
-| patient_phone     | Phone number                          | VARCHAR      | 10   | (XXX)XXX-XXXX |         |
-| patient_addy   | Address                               | VARCHAR      | 45   |               |         |
-| emergency_contact | Emergency contact name                | VARCHAR      | 45   |               |         |
-| patient_bloodtype | Blood type                            | VARCHAR      | 45   |               |         |
+---
 
-### Table: Prescription
-| Column Name       | Description                                     | Data Type | Size | Format | Key?    |
-| ----------------- | ----------------------------------------------- | --------- | ---- | ------ | ------- |
-| prescriptionID    | Unique number used to identify the prescription | INT       |      |        | **Yes** |
-| drug_name         | Name of the drug                                | VARCHAR      | 45   |        |         |
-| drug_dosage       | Correct dosage of the drug                      | VARCHAR      | 45   |        |         |
-| drug_frequency    | How often the drug should be taken              | VARCHAR      | 45   |        |         |
-| drug_instructions | Instructions on how to take the drug            | VARCHAR      | 45   |        |         |
+## Insurance
+| Column Name     | Description               | Data Type | Size | Format | Key? |
+|-----------------|---------------------------|-----------|------|--------|------|
+| insuranceID     | Unique number for insurance | INT     | —    | —      | PK   |
+| provider        | Insurance provider name   | VARCHAR   | 45   | —      | —    |
+| ins_policynumber| Insurance policy number   | VARCHAR   | 45   | —      | —    |
+| ins_coverage    | Insurance coverage type   | VARCHAR   | 45   | —      | —    |
 
-### Table: Room
-| Column Name       | Description                                | Data Type | Size | Format | Key?    |
-| ----------------- | ------------------------------------------ | --------- | ---- | ------ | ------- |
-| roomID            | Unique number to identify the room         | INT       |      |        | **Yes** |
-| room_num       | Room number                                | VARCHAR      | 45   |        |         |
-| room_type         | Type of room                               | VARCHAR      | 45   |        |         |
-| room_availability | Room availability status (vacant/occupied) | VARCHAR      | 45   |        |         |
+---
 
+## Lab_Test
+| Column Name | Description                 | Data Type | Size | Format     | Key?         |
+|-------------|-----------------------------|-----------|------|------------|--------------|
+| labtestID   | Unique number for the lab test | INT     | —    | —          | PK           |
+| patientID   | Patient tested              | INT       | —    | —          | FK – Patient |
+| doctorID    | Doctor ordering the test    | INT       | —    | —          | FK – Doctor  |
+| test_type   | Type of lab test            | VARCHAR   | 45   | —          | —            |
+| test_result | Result of the lab test      | VARCHAR   | 45   | —          | —            |
+| test_date   | Date of the lab test        | DATE      | —    | YYYY/MM/DD | —            |
+
+---
+
+## Med_Record
+| Column Name     | Description                          | Data Type | Size | Format     | Key?         |
+|-----------------|--------------------------------------|-----------|------|------------|--------------|
+| recordID        | Unique number for the record         | INT       | —    | —          | PK           |
+| med_diagnosis   | The diagnosis of the patient         | VARCHAR   | 45   | —          | —            |
+| med_treatment   | The suggested treatment              | VARCHAR   | 45   | —          | —            |
+| med_record_date | Date the record was created          | DATE      | —    | YYYY/MM/DD | —            |
+| patientID       | Patient linked                       | INT       | —    | —          | FK – Patient |
+
+---
+
+## Patient
+| Column Name      | Description            | Data Type | Size | Format        | Key?         |
+|------------------|------------------------|-----------|------|---------------|--------------|
+| patientID        | Unique number for patient | INT    | —    | —             | PK           |
+| first_name       | First name of patient  | VARCHAR   | 45   | —             | —            |
+| last_name        | Last name of patient   | VARCHAR   | 45   | —             | —            |
+| patient_dob      | Date of birth          | DATE      | —    | YYYY/MM/DD    | —            |
+| patient_gender   | Gender                 | VARCHAR   | 45   | —             | —            |
+| patient_phone    | Phone number           | VARCHAR   | 10   | (XXX)XXX-XXXX | —            |
+| patient_addy     | Address                | VARCHAR   | 45   | —             | —            |
+| emergency_contact| Emergency contact name | VARCHAR   | 45   | —             | —            |
+| patient_bloodtype| Blood Type             | VARCHAR   | 45   | —             | —            |
+| insuranceID      | Insurance linked       | INT       | —    | —             | FK – Insurance |
+| roomID           | Room assigned          | INT       | —    | —             | FK – Room    |
+
+---
+
+## Prescription
+| Column Name       | Description                          | Data Type | Size | Format | Key?         |
+|-------------------|--------------------------------------|-----------|------|--------|--------------|
+| prescriptionID    | Unique number for the prescription   | INT       | —    | —      | PK           |
+| patientID         | Patient prescribed                   | INT       | —    | —      | FK – Patient |
+| doctorID          | Doctor who prescribed                | INT       | —    | —      | FK – Doctor  |
+| drug_name         | Name of the drug                     | VARCHAR   | 45   | —      | —            |
+| drug_dosage       | Correct dosage                       | VARCHAR   | 45   | —      | —            |
+| drug_frequency    | How often the drug should be taken   | VARCHAR   | 45   | —      | —            |
+| drug_instructions | Instructions on how to take the drug | VARCHAR   | 45   | —      | —            |
+
+---
+
+## Room
+| Column Name        | Description                                   | Data Type | Size | Format | Key?            |
+|--------------------|-----------------------------------------------|-----------|------|--------|-----------------|
+| roomID             | Unique number for specific rooms              | INT       | —    | —      | PK              |
+| room_number        | The room number                               | VARCHAR   | 45   | —      | —               |
+| room_type          | The room type                                 | VARCHAR   | 45   | —      | —               |
+| room_availability  | Status (vacant/occupied)                      | VARCHAR   | 45   | —      | —               |
+| departmentID       | Department assigned                           | INT       | —    | —      | FK – Department |
+
+## Database Table
+
+<img width="678" height="603" alt="image" src="https://github.com/user-attachments/assets/300ba37d-936e-4852-9813-297a9a86f2ef" />
 
 ## SQL Queries
 
@@ -175,7 +214,7 @@ Query 7 shows which patients currently have unpaid bills, and which department t
 
 <img width="317" height="210" alt="Screenshot 2025-10-26 at 5 30 47 PM" src="https://github.com/user-attachments/assets/ef97f327-3eb9-45a6-9d00-dd61295af087" />
 
-Query 7 allows a hospital administrator to track patients that have outstanding balances by department. Departments with high unpaid revenue can be identified and action can be taken to lessen the number of unpaid bills.
+Query 7 allows a hospital administrator to track patients that have outstanding balances by department. Departments with high unpaid revenue can be identified, and action can be taken to lessen the number of unpaid bills.
 
 Query 8 allows one to find the cost of the patient's bill and organize it based on their insurance provider
 
@@ -187,7 +226,7 @@ Query 9: List the patient name and their diagnoses organized by their blood type
 
 <img width="352" height="196" alt="Screenshot 2025-10-26 at 5 32 03 PM" src="https://github.com/user-attachments/assets/b63064f4-0435-4c5e-936d-617b14e4b432" />
 
-Query 9 allows a hospital administrator to organize patients and their diagnoses by their blood type. It then sums the number of diagnoses to see which is most and least common.
+Query 9 allows a hospital administrator to organize patients and their diagnoses by their blood type. It then sums the number of diagnoses to see which is the most and least common.
 
 Query 10: Query 10 lists the doctors name, their patient count, and the total number of prescriptions given out
 
