@@ -221,13 +221,13 @@ Query 8 allows one to find the cost of the patient's bill and organize it based 
 
 Query 8 allows a hospital administrator to access the cost of a patient’s bill to then organize that information based on their insurance provider.
 
-Query 9: List the patient name and their diagnoses organized by their blood type and sum the number of diagnoses.
+Query 9 List the patient name and their diagnoses organized by their blood type and sum the number of diagnoses.
 
 <img width="352" height="196" alt="Screenshot 2025-10-26 at 5 32 03 PM" src="https://github.com/user-attachments/assets/b63064f4-0435-4c5e-936d-617b14e4b432" />
 
 Query 9 allows a hospital administrator to organize patients and their diagnoses by their blood type. It then sums the number of diagnoses to see which is the most and least common.
 
-Query 10: Query 10 lists the doctors name, their patient count, and the total number of prescriptions given out
+Query 10 Query 10 lists the doctor's name, their patient count, and the total number of prescriptions given out
 
 <img width="424" height="166" alt="Screenshot 2025-10-26 at 5 32 43 PM" src="https://github.com/user-attachments/assets/ea1fa86f-2078-4dc2-87d2-6472c504cbd6" />
 
