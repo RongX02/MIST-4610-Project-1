@@ -156,6 +156,9 @@ Beyond daily appointments, doctors can issue Prescriptions or order Lab Tests fo
 | room_availability  | Status (vacant/occupied)                      | VARCHAR   | 45   | —      | —               |
 | departmentID       | Department assigned                           | INT       | —    | —      | FK – Department |
 
+## Database Table 
+<img width="678" height="603" alt="image" src="https://github.com/user-attachments/assets/c283e489-e4d1-4237-aa99-f2dd548aff4d" />
+
 ## SQL Queries
 
 #### **Query 1**
